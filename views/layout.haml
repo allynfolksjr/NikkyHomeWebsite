@@ -1,0 +1,39 @@
+!!!
+%head
+  %title=page_title
+  %link{href: 'stylesheets/foundation.css', rel: 'stylesheet', type: 'text/css'}
+  %script{src: 'js/vendor/custom.modernizr.js'}
+  %link{href: 'http://fonts.googleapis.com/css?family=PT+Sans', rel: 'stylesheet', type: 'text/css'}
+%body
+  .row
+    .large-6.columns
+      %h1 Nikky Southerland
+      %ul.inline-list
+        %li
+          %a{:href => "/"} Home
+        %li
+          %a{:href => "/resume"} Resume
+        %li
+          %a{:href => "/contact-me"} Contact Me
+    .large-6.columns
+      %img.right{:src => "img/nikky_400x300.jpg"}
+  .row
+    .large-12.columns
+      %hr/
+  =yield
+%footer.row.full-width
+  .large-12.columns
+    %hr/
+    .large-12.columns
+      .text-center
+        %p
+          Made with love by <a href="http://twitter.com/allynfolksjr">@allynfolksjr</a> with some backup from <a href="http://foundation.zurb.com/">Zurb</a> and <a href="http://www.sinatrarb.com/">Sinatra</a>.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://github.com/allynfolksjr/NikkyHomeWebsite">View the source</a>.
+  :javascript
+    document.write('<script src=/js/vendor/'
+    + ('__proto__' in {} ? 'zepto' : 'jquery')
+    + '.js><\/script>');
+  %script{src: '/js/foundation/foundation.js'}
+  %script
+    $(document).foundation()
+
+  %script{src: 'js/index.js'}
