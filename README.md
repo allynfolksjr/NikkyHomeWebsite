@@ -1,4 +1,4 @@
 NikkyHomeWebsite
 ================
 
-Nikky's Personal Website - A Sinatra+Zerb project
+Nikky's Personal Website - A Sinatra+Zurb project
