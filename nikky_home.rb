@@ -1,3 +1,5 @@
+
+
 class NikkyHome < Sinatra::Base
 
   configure do
