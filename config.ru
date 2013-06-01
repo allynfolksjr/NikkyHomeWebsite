@@ -1,9 +1,6 @@
-require 'rubygems'
-require 'bundler'
 require 'sass/plugin/rack'
 
 Bundler.require
-
 
 #h/t http://blog.bts.co/post/991947650/using-sinatra-with-sass-scss
 Sass::Plugin.options[:template_location] = 'views/stylesheets'

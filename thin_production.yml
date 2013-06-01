@@ -1,0 +1,10 @@
+---
+  environment: production
+  port: 5280
+  servers: 4
+  tag: nikky_home
+  timeout: 10
+  onebyone: true
+  daemonize: true
+  rackup: config.ru
+

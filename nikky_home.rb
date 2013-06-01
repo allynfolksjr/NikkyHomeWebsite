@@ -2,6 +2,8 @@
 
 class NikkyHome < Sinatra::Base
 
+  set :logging, true # Sends log to STDOUT
+
   configure do
     set :static_cache_control, [:public, :max_age => 60]
   end
@@ -35,6 +37,5 @@ class NikkyHome < Sinatra::Base
 
   end
 
-
-
 end
+
