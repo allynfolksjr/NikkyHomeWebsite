@@ -1,0 +1,6 @@
+---
+  environment: development
+  port: 5280
+  tag: nikky_home
+  timeout: 10
+  rackup: config.ru

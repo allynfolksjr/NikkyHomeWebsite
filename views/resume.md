@@ -1,10 +1,10 @@
-Experience
-==========
+## Experience
 
-Senior Computer Specialist
------------------------------
-### UW Information Technology
-### September 2010 - Present
+
+### Senior Computer Specialist
+
+#### UW Information Technology
+#### September 2010 - Present
 
 - Supports GNU/Linux Uniform Access Computing and Web Publishing/Development
 - Develops and Utilizes CLI Tools to facilitate system support and operations
@@ -15,49 +15,49 @@ Senior Computer Specialist
 - Assists in performance monitoring, tracking, and evaluation of Apache servers
 - Develops and maintains Ruby Gems for monitoring and troubleshooting user issues
 
-Student Consultant
-------------------
-### UW Information Technology
-### March 2009 - September 2010
+### Student Consultant
+
+#### UW Information Technology
+#### March 2009 - September 2010
 
 - Assisted clients with technology-related issues and triaged requests
 - Supported users via phone, e-mail, and office walk-ins
 - Escalated and researched issues as necessary
 
-Volunteer Archiver and Community Outreach Coordinator
------------------------------------------------------
-### The ticalc.org project
-### January 2009 - Present
+### Volunteer Archiver and Community Outreach Coordinator
+
+#### The ticalc.org project
+#### January 2009 - Present
 
 - Maintains file archive of a large calculator-oriented website.
 - Researches and writes news articles about current events in the community.
 - Serves as primary point of contact for all help requests sent to the site.
 - Organizes community-building events utilizing Internet technologies.
 
-Web Consultant
---------------
-### Partners for Our Children
-### September 2009 - August 2010
+### Web Consultant
+
+#### Partners for Our Children
+#### September 2009 - August 2010
 
 - Maintains and updates website for non-profit organization.
 - Programs and implements new features which facilitate increased communications with the public.
 - Works closely with staff to develop new ways of increasing public awareness about child welfare reform efforts via website outreach.
 
-Public Affairs Intern
----------------------
-### Kitsap County Consolidated Housing Authority
-### Summer 2006, 2007, & 2008
+### Public Affairs Intern
+
+#### Kitsap County Consolidated Housing Authority
+#### Summer 2006, 2007, & 2008
 
 - Maintained relations with media and community members.
 - Researched and wrote policy briefs for wide range of issues, including legal mediation efforts.
 - Edited and organized publication of Kitsap County Real Estate Trends.
 
-Education
-=========
-## University of Washington Professional and Continuing Education
+## Education
+
+### University of Washington Professional and Continuing Education
 Certificate in Ruby on Rails Programming (In Progress)
 
-## University of Washington
+### University of Washington
 Bachelor of Arts
 
 Graduated Spring 2010; 3.58 GPA; 219 Credits
@@ -66,11 +66,12 @@ Major: Law, Societies, and Justice
 
 Minors: Political Science; Human Rights
 
-## North Mason High School
+### North Mason High School
 Graduated 2006
 
-Skills
-======
+## Skills
+
+- <a href="about-me">Tech Cred</a>
 - ITIL v4 Foundations Certificate
 - Experienced in running and maintaining wide array of Linux server distributions, including RHEL, Debian, Fedora, and Ubuntu
 - Experienced in setting up, running, and configuring Apache / Apache Tomcat
