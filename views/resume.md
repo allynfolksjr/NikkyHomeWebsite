@@ -71,7 +71,7 @@ Graduated 2006
 
 ## Skills
 
-- <a href="about-me">Tech Cred</a>
+- <a href="tech-cred">Tech Cred</a>
 - ITIL v4 Foundations Certificate
 - Experienced in running and maintaining wide array of Linux server distributions, including RHEL, Debian, Fedora, and Ubuntu
 - Experienced in setting up, running, and configuring Apache / Apache Tomcat

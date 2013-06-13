@@ -1,6 +1,6 @@
 $(document).ready ->
   $('#derp').click ->
     $(this).fadeOut()
-  $('img').click ->
+  $('.goaway').click ->
     $(this).fadeOut()
 

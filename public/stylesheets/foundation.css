@@ -3816,3 +3816,10 @@ table {
     max-width: 500px; }
   .f-dropdown.large {
     max-width: 800px; }
+
+img.wrap-left {
+  float: left;
+  margin: 0px 20px 20px 00px; }
+
+#nikky_image {
+  margin-top: 5px; }
