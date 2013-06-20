@@ -55,12 +55,12 @@
 ## Education
 
 ### University of Washington Professional and Continuing Education
-Certificate in Ruby on Rails Programming (In Progress)
+Certificate in Ruby on Rails Programming - 2013
 
 ### University of Washington
-Bachelor of Arts
+Bachelor of Arts - 2010
 
-Graduated Spring 2010; 3.58 GPA; 219 Credits
+3.58 GPA; 219 Credits
 
 Major: Law, Societies, and Justice
 
