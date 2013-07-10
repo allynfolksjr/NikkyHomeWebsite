@@ -1,24 +1,30 @@
 ## Experience
 
-
 ### Senior Computer Specialist
 
-#### UW Information Technology
-#### September 2010 - Present
+UW Information Technology      
+September 2010 - Present
 
-- Supports GNU/Linux Uniform Access Computing and Web Publishing/Development
+#### Duties
+
 - Develops and Utilizes CLI Tools to facilitate system support and operations
-- Maintains UW Blogs Network (WordPress) and develops custom service integration with central UW authentication and group frameworks
+- Supports GNU/Linux Uniform Access Computing and Web Publishing/Development
 - Provides second- and third-tier support for web publishing and development
 - Maintains and troubleshoots production MySQL database servers
 - Consults and advises campus units for wide range of web development technology including PHP, Ruby, Python, Perl, C, and bash scripting
 - Assists in performance monitoring, tracking, and evaluation of Apache servers
 - Develops and maintains Ruby Gems for monitoring and troubleshooting user issues
 
+#### Selected Projects
+- Created and maintains collection of Ruby and Ruby on Rails applications to faciliate system monitoring, application troubleshooting, and other requirements for supporting a large hosting environment.
+- Created and maintains UW Blogs Network (WordPress) and develops custom service integration with central UW authentication and group frameworks
+
+
+
 ### Student Consultant
 
-#### UW Information Technology
-#### March 2009 - September 2010
+UW Information Technology  
+March 2009 - September 2010
 
 - Assisted clients with technology-related issues and triaged requests
 - Supported users via phone, e-mail, and office walk-ins
@@ -26,8 +32,8 @@
 
 ### Volunteer Archiver and Community Outreach Coordinator
 
-#### The ticalc.org project
-#### January 2009 - Present
+The ticalc.org project  
+January 2009 - Present
 
 - Maintains file archive of a large calculator-oriented website.
 - Researches and writes news articles about current events in the community.
@@ -36,8 +42,8 @@
 
 ### Web Consultant
 
-#### Partners for Our Children
-#### September 2009 - August 2010
+Partners for Our Children  
+September 2009 - August 2010
 
 - Maintains and updates website for non-profit organization.
 - Programs and implements new features which facilitate increased communications with the public.
@@ -45,8 +51,8 @@
 
 ### Public Affairs Intern
 
-#### Kitsap County Consolidated Housing Authority
-#### Summer 2006, 2007, & 2008
+Kitsap County Consolidated Housing Authority  
+Summer 2006, 2007, & 2008
 
 - Maintained relations with media and community members.
 - Researched and wrote policy briefs for wide range of issues, including legal mediation efforts.
@@ -71,7 +77,7 @@ Graduated 2006
 
 ## Skills
 
-- <a href="tech-cred">Tech Cred</a>
+- <a href="technologies">Tech Cred</a>
 - ITIL v4 Foundations Certificate
 - Experienced in running and maintaining wide array of Linux server distributions, including RHEL, Debian, Fedora, and Ubuntu
 - Experienced in setting up, running, and configuring Apache / Apache Tomcat
