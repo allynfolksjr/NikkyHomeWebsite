@@ -6,9 +6,20 @@
   %link{href: 'http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300', rel: 'stylesheet', type: 'text/css'}
 %body
   .row
-    .large-7.columns
+    .large-8.columns
       %h1
         = page_title
+    -# .large-4.columns
+    -#   %ul.inline-list
+    -#     %li
+    -#       %a{:href => "https://github.com/allynfolksjr"}
+    -#         %img{src: 'img/Octocat.jpg', width: 50, height: 50, alt: 'octocat github logo'}
+    -#     %li
+    -#       %a{:href => "https://twitter.com/allynfolksjr"}
+    -#         %img{src: 'img/twitter-bird-blue-on-white.png', width: 50, height: 50, alt: 'twitter logo'}
+
+  .row
+    .large-8.columns 
       %ul.inline-list
         %li
           %a{href: "/"} Home
@@ -22,6 +33,7 @@
           %a{href: "/about-me"} About Me
         %li
           %a{href: "/contact-me"} Contact Me
+    .large-4.columns
       %ul.inline-list
         %li
           %a{:href => "https://github.com/allynfolksjr"}
@@ -29,9 +41,6 @@
         %li
           %a{:href => "https://twitter.com/allynfolksjr"}
             %img{src: 'img/twitter-bird-blue-on-white.png', width: 50, height: 50, alt: 'twitter logo'}
-    .large-5.columns
-      %img.right#nikky_image{src: "img/nikky_400x300.jpg", alt: "Nikky picture"}
-      
 
 
   .row
