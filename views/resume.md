@@ -1,9 +1,19 @@
 ## Experience
 
+### Software Developer
+
+Rick Steves' Europe Through the Back Door  
+September 2013 - Present
+
+#### Duties
+
+- Develop and maintain Ruby on Rails Applications
+- Implement and maintain code testing
+
 ### Senior Computer Specialist
 
 UW Information Technology      
-September 2010 - Present
+September 2010 - September 2013
 
 #### Duties
 
