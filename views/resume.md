@@ -2,17 +2,20 @@
 
 ### Software Developer
 
-Rick Steves' Europe Through the Back Door  
+Rick Steves' Europe Through the Back Door
 September 2013 - Present
 
 #### Duties
 
 - Develop and maintain Ruby on Rails Applications
 - Implement and maintain code testing
+- Package and deploy applications to cloud-based PaaS hosting providers
+- Monitor and diagnose deployed applications
+- Locate performance bottlenecks and implement software- and application-layer improvements
 
 ### Senior Computer Specialist
 
-UW Information Technology      
+UW Information Technology
 September 2010 - September 2013
 
 #### Duties
@@ -33,7 +36,7 @@ September 2010 - September 2013
 
 ### Student Consultant
 
-UW Information Technology  
+UW Information Technology
 March 2009 - September 2010
 
 - Assisted clients with technology-related issues and triaged requests
@@ -42,7 +45,7 @@ March 2009 - September 2010
 
 ### Volunteer Archiver and Community Outreach Coordinator
 
-The ticalc.org project  
+The ticalc.org project
 January 2009 - Present
 
 - Maintains file archive of a large calculator-oriented website.
@@ -52,7 +55,7 @@ January 2009 - Present
 
 ### Web Consultant
 
-Partners for Our Children  
+Partners for Our Children
 September 2009 - August 2010
 
 - Maintains and updates website for non-profit organization.
@@ -61,7 +64,7 @@ September 2009 - August 2010
 
 ### Public Affairs Intern
 
-Kitsap County Consolidated Housing Authority  
+Kitsap County Consolidated Housing Authority
 Summer 2006, 2007, & 2008
 
 - Maintained relations with media and community members.
