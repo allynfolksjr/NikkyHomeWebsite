@@ -12,6 +12,7 @@ September 2013 - Present
 - Package and deploy applications to cloud-based PaaS hosting providers
 - Monitor and diagnose deployed applications
 - Locate performance bottlenecks and implement software- and application-layer improvements
+- Create and maintain JSON APIs
 
 ### Senior Computer Specialist
 
