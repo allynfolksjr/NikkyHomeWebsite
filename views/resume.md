@@ -7,11 +7,11 @@ September 2013 - Present
 
 #### Duties
 
-- Develop and maintain Ruby on Rails Applications
-- Implement and maintain code testing
-- Package and deploy applications to cloud-based PaaS hosting providers
-- Monitor and diagnose deployed applications
+- Develop and maintain Ruby on Rails Applications and Gems
 - Locate performance bottlenecks and implement software- and application-layer improvements
+- Package and deploy applications to cloud-based PaaS hosting providers
+- Implement and maintain code testing
+- Monitor and diagnose deployed applications
 - Create and maintain JSON APIs
 
 ### Senior Computer Specialist
