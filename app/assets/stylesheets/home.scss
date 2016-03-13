@@ -1,3 +1,38 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.head {
+  .content {
+    padding: 0 .5rem 0 .5rem;
+  }
+}
+
+.purple {
+  background-color: #39275B;
+  color: white;
+}
+
+.blue {
+  background-color: #2199e8;
+  color: white;
+  a {
+    color: #39275B;
+    &:visited, &:hover {
+      color: #39275B;
+    }
+  }
+}
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  .row > div {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+.no-padding {
+  padding: 0;
+}
