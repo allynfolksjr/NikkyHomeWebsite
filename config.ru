@@ -1,10 +1,5 @@
-require 'sass/plugin/rack'
+# This file is used by Rack-based servers to start the application.
 
-Bundler.require
+require ::File.expand_path('../config/environment', __FILE__)
 
-#h/t http://blog.bts.co/post/991947650/using-sinatra-with-sass-scss
-Sass::Plugin.options[:template_location] = 'views/stylesheets'
-use Sass::Plugin::Rack
-
-require './nikky_home'
-run NikkyHome
+run Rails.application
