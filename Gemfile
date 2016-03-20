@@ -15,8 +15,11 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Dalli for Memcache
 gem 'dalli'
 
-# Fetch Blog Info
+# Fetch Recent Blogs
 gem 'rubypress'
+
+# Fetch Recent Tweets
+gem 'twitter'
 
 # Pry
 gem 'pry-rails'
