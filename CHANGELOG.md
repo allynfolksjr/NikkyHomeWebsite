@@ -1,3 +1,7 @@
+# 1.3.0
+
+* Show random flickr photo from most recent 5 public
+
 # 1.2.3
 
 * Fix cache
