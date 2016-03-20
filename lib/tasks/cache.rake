@@ -1,5 +1,6 @@
 require 'nikky/twitter'
 require 'nikky/wordpress'
+require 'nikky/flickr'
 
 namespace :cache do
   desc "Populates API caches"
