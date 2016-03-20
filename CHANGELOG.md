@@ -1,3 +1,10 @@
+# 1.2.2
+
+* Fix image margins on various media breakpoints
+* Add preloading cache rake task
+* Copy changes
+* Add WP logo to posts
+
 # 1.2.1
 
 * Add favicon

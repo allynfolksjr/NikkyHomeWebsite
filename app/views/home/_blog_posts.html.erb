@@ -1,6 +1,7 @@
 <% if posts.present? %>
   <% posts.first(3).each do |post| %>
     <h5>
+      <%= fa_icon 'wordpress' %>
       <%= link_to post.title, post.url, target: '_blank' %>
       <small>Posted <%= time_ago_in_words post.posted_at %> ago</small>
     </h5>
