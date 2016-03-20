@@ -17,6 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Fetch Blog Info
 gem 'rubypress'
 
+# Pry
+gem 'pry-rails'
+
 # Use jquery as the JavaScript library
 #gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
