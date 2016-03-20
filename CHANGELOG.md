@@ -1,3 +1,7 @@
+# 1.2.0
+
+* Show recent text-only tweets
+
 # 1.1.1
 
 * Bug Fix 
