@@ -21,6 +21,9 @@ gem 'rubypress'
 # Fetch Recent Tweets
 gem 'twitter'
 
+# Fetch Recent Flickrs
+gem 'flickraw'
+
 # Pry
 gem 'pry-rails'
 
