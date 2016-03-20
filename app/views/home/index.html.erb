@@ -1,16 +1,15 @@
 <% content_for(:title){'Nikky'} %>
 <div class="head">
-  <div class="row align-middle">
+  <div class="row align-top">
     <div class="small-12 medium-6">
       <%= image_tag 'nikky.jpg', alt: 'nikky' %>
     </div>
     <div class="small-12 medium-6 content">
       <h1>Nikky Southerland</h1>
-      <p>
+      <p class="lead">
         Fifth-dimensional being currently consuming vast quantities of commas. Lives in alt-reality Seattle. Spews out code.
       </p>
-      <p>LKE by way of SHN and FCO</p>
-      <p><%= fa_icon 'twitter' %> <a href="https://twitter.com/allynfolksjr">@allynfolksjr</a></p>
+      <%= render partial: 'tweets', locals: {tweets: @tweets} %>
     </div>
   </div>
 </div>
