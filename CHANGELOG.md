@@ -1,3 +1,7 @@
+# 1.2.3
+
+* Fix cache
+
 # 1.2.2
 
 * Fix image margins on various media breakpoints
