@@ -1,3 +1,7 @@
+# 1.2.1
+
+* Add favicon
+
 # 1.2.0
 
 * Show recent text-only tweets
