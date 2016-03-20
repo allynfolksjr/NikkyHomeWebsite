@@ -33,7 +33,7 @@
   <div class="row align-middle">
 
     <div class="small-12 medium-7 small-order-2 medium-order-1 image">
-      <%= image_tag 'photography.jpg', alt: 'mountains', width: '700' %>
+      <%= render partial: 'flickr', locals: {photos: @flickr_photos} %>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
       <h2>Photography</h2>

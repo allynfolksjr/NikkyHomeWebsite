@@ -1,0 +1,9 @@
+<% if photos.present? %>
+  <% photo = photos.sample %>
+  <%= link_to image_tag(photo.image_url, alt: 'recentflickr photo', width: 700),
+        photo.url,
+        target: '_blank'
+  %>
+<% else %>
+  <%= image_tag 'photography.jpg', alt: 'mountains', width: '700' %>
+<% end %>
