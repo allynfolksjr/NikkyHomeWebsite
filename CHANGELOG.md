@@ -1,3 +1,8 @@
+# 1.4.0 (2017-02-21)
+
+* Update gems
+* Copy updates
+
 # 1.3.0
 
 * Show random flickr photo from most recent 5 public
