@@ -25,8 +25,12 @@ gem 'twitter'
 # Fetch Recent Flickrs
 gem 'flickraw'
 
+# Configuration
+gem 'figaro'
+
 # Pry
 gem 'pry-rails'
+gem 'awesome_print'
 
 # Use jquery as the JavaScript library
 #gem 'jquery-rails'
