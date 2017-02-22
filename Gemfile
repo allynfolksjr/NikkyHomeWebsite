@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta3', '< 5.1'
+gem 'rails', '>= 5.0.0', '< 5.1'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -24,8 +25,12 @@ gem 'twitter'
 # Fetch Recent Flickrs
 gem 'flickraw'
 
+# Configuration
+gem 'figaro'
+
 # Pry
 gem 'pry-rails'
+gem 'awesome_print'
 
 # Use jquery as the JavaScript library
 #gem 'jquery-rails'
@@ -44,10 +49,8 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 3.0'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'rails_12factor', group: :production

@@ -7,7 +7,8 @@
     <div class="small-12 medium-6 content">
       <h1>Nikky Southerland</h1>
       <p class="lead">
-        Fifth-dimensional being currently consuming vast quantities of commas. Lives in alt-reality Seattle. Spews out code.
+        Fifth-dimensional being currently consuming vast quantities of commas.
+        Lives in alt-reality Seattle. Spews out code. Respected by everyone.
       </p>
       <%= render partial: 'tweets', locals: {tweets: @tweets} %>
     </div>
@@ -20,10 +21,13 @@
       <h2>Blogging</h2>
     </div>
     <div class="small-12 medium-7 small-order-1 medium-order-2">
-      <p>I've kept up a blog of some form for <%= Time.now.year - 2004 %> years
-      now, and <a href="https://nykida.net" target="_blank">nykida.net</a> is a great way
-      to dive deep into some of the things I'm interested in writing about.
-      Which turns out is mostly old photographs, travel, and video games.</p>
+      <p>
+        I've kept up a blog of some form for <%= Time.now.year - 2004 %> years
+        now, and <a href="http://nykida.net" target="_blank">nykida.net</a> is a great way
+        to dive deep into some of the things I'm interested in writing about.
+        I don't claim to be particularly good at it, but it keeps me occupied from
+        time to time.
+      </p>
       <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
     </div>
   </div>
@@ -38,7 +42,7 @@
     <div class="small-12 medium-5 small-order-1 medium-order-2">
       <h2>Photography</h2>
       <p>
-        I attempt to make sense of the world through the eye of a camera.
+        Sometimes I'm known to take pictures.
       </p>
       <p>
         Current photos can always be found on my flickr, along with digitized
@@ -61,10 +65,12 @@
         Traveling
       </h2>
       <p>
-        Travel is me choosen past time, and I'm almost certainly going to be
-        on a trip the next time I'm on vacation. Some of my favorite places
-        include Croatia, Iceland, Switzerland, and the United Kingdom.
-      </p>
+        I travel a lot. Countries I've visited include:
+        Italy, France, Germany, Austria, United Kingdom, Republic of Ireland,
+        The Netherlands, Finland, Sweden, Denmark, Croatia,
+        Czech Republic, Slovenia, Hungary, Poland,
+        Liechtenstein, Iceland, Switzerland, Spain,
+        Belize, Mexico, Canada, and Honduras.</p>
     </div>
      <div class="small-12 medium-7 small-order-2 medium-order-2 image">
       <%= image_tag 'travel.jpg', alt: 'nikky on a river', width: '700' %>
@@ -77,9 +83,7 @@
     <div class="small-12 medium-7 small-order-2 medium-order-1">
       <p>
         I work as a full stack web developer at a European travel company.
-        Currently specializing in the Ruby on Rails framework, I'm most
-        often found integrating various business applications with each other.
-        But you probably don't care about that, do you?
+        Currently specializing in the Ruby on Rails framework and data integration.
       </p>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
@@ -92,11 +96,9 @@
   <div class="row align-middle">
     <div class="small-12 medium-7 small-order-2 medium-order-2">
       <p>
-        While attending the University of Washington in Seattle, I
-        majored in <em>Law, Societies, and Justice</em>, a socio-legal
-        discipline that instilled a strong sense of social justice and empathy
-        into my ethos. Complementing the degree are minors in <em>Political
-        Science</em> and <em>Human Rights</em>.
+        I have a Bachelor of Arts from University of Washington in Seattle, and
+        majored in <em>Law, Societies, and Justice</em> with
+        minors in <em>Political Science</em> and <em>Human Rights</em>.
       </p>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-1">
@@ -115,7 +117,7 @@
       <p>
         I'm the co-owner of a small bundle of fur that occasionally
         bites us. We've named this fur <em>Minerva</em>. Her name is partially
-        due to Minerva the goddess of strategy, partially due to the character
+        due to Minerva the goddess of strategy; partially due to the character
         from <em>Harry Potter</em>.
       </p>
     </div>
@@ -129,11 +131,8 @@
     </div>
     <div class="small-12 medium-7 small-order-2 medium-order-2">
       <p>
-        I've lived in Seattle for the past <%= Time.now.year - 2006 %> years, and
-        love being in the city that we often visited as a child. College
-        gave me a love of public transit, and I strongly believe that cities
-        can best meet the challenges of the 21st century through strong
-        investments in walkability and transit.
+        I've lived in Seattle for the past <%= Time.now.year - 2006 %> years.
+        It's a pretty cool place.
       </p>
     </div>
   </div>
