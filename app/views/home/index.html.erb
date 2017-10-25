@@ -7,8 +7,10 @@
     <div class="small-12 medium-6 content">
       <h1>Nikky Southerland</h1>
       <p class="lead">
-        Fifth-dimensional being currently consuming vast quantities of commas.
-        Lives in alt-reality Seattle. Spews out code. Respected by everyone.
+        Lives in alt-reality Seattle.<br>
+        Fifth-dimensional being.<br>
+        Spews out code.<br>
+        Respected by everyone.
       </p>
       <%= render partial: 'tweets', locals: {tweets: @tweets} %>
     </div>
@@ -23,10 +25,8 @@
     <div class="small-12 medium-7 small-order-1 medium-order-2">
       <p>
         I've kept up a blog of some form for <%= Time.now.year - 2004 %> years
-        now, and <a href="http://nykida.net" target="_blank">nykida.net</a> is a great way
-        to dive deep into some of the things I'm interested in writing about.
-        I don't claim to be particularly good at it, but it keeps me occupied from
-        time to time.
+        now at <a href="http://nykida.net" target="_blank">nykida.net</a>.
+        My most recent posts:
       </p>
       <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
     </div>
@@ -45,8 +45,7 @@
         Sometimes I'm known to take pictures.
       </p>
       <p>
-        Current photos can always be found on my flickr, along with digitized
-        slides from family archives.
+        There are more of my pictures than you'd ever care to see at my flickr.
       </p>
       <p>
         <%= fa_icon 'flickr' %>
@@ -65,15 +64,15 @@
         Traveling
       </h2>
       <p>
-        I travel a lot. Countries I've visited include:
+        I travel from time to time. Countries I've visited include:
         Italy, France, Germany, Austria, United Kingdom, Republic of Ireland,
-        The Netherlands, Finland, Sweden, Denmark, Croatia,
+        The Netherlands, Finland, Sweden, Denmark, Norway, Croatia,
         Czech Republic, Slovenia, Hungary, Poland,
         Liechtenstein, Iceland, Switzerland, Spain,
         Belize, Mexico, Canada, and Honduras.</p>
     </div>
      <div class="small-12 medium-7 small-order-2 medium-order-2 image">
-      <%= image_tag 'travel.jpg', alt: 'nikky on a river', width: '700' %>
+      <%= image_tag 'travel.jpg', alt: 'nikky in front of buildings', width: '700' %>
     </div>
   </div>
 </div>
@@ -115,9 +114,9 @@
     <div class="small-12 medium-5 small-order-1 medium-order-2">
       <h2>Cat Wrangler</h2>
       <p>
-        I'm the co-owner of a small bundle of fur that occasionally
-        bites us. We've named this fur <em>Minerva</em>. Her name is partially
-        due to Minerva the goddess of strategy; partially due to the character
+        I'm the caretaker of a small bundle of fur that often demands attention
+        when I'm typing. This creature is called <strong>Minerva</strong>, and she's named
+        after the goddess of strategy as well as the character
         from <em>Harry Potter</em>.
       </p>
     </div>
@@ -141,32 +140,53 @@
 <div class="blue section">
   <div class="row">
     <div class="small-12 medium-7 small-order-2 medium-order-1">
-      <p>Pumping through my headphones are probably
-      <em>Boards of Canada</em> are the best music group of the past
-      hundred years. Other favorites include <em>El Huervo</em>,
-      <em>Harvey Danger</em>, <em>The Long Winters</em>,
-      <em>Talk Talk</em>, <em>Massive Attack</em>, <em>
-      The Notorious B.I.G.</em>
-      Check out my <a href="http://www.last.fm/user/allynfolksjr/"
-      target="_blank">last.fm</a> page for a much more detailed listing of my
-      musical tastes.</p>
+      <h5>Music</h5>
+      <p>
+        Pumping through my headphones are probably
+        <em>Boards of Canada</em> are the best music group of the past
+        hundred years. Other favorites include <em>El Huervo</em>,
+        <em>Harvey Danger</em>, <em>The Long Winters</em>,
+        <em>Talk Talk</em>, <em>Massive Attack</em>, <em>
+        The Notorious B.I.G.</em>
+        My <a href="http://www.last.fm/user/allynfolksjr/"
+        target="_blank">last.fm</a> page has more information about
+        what I listen to than you should ever likely be interested in.
+      </p>
 
-      <p>Computer games are great, and strategy games are the best <em>
-      Starcraft</em>, <em>Warcraft III</em>, <em>Supreme Commander</em>
-      are some of my favorites. Filling out the rest are <em>Mario Kart 64</em>,
-       <em>Hotline Miami</em>, and <em>Dota2</em>.</p>
+      <h5>Gaming</h5>
 
-      <p>I'm most often found reading non-fiction books. Favorite genres include
-      WWII, general history, and space. Fiction genres include Sci-Fi and Graphic
-      Novels. Favorites include <em>Dune</em>, <em>The Culture Series</em>, and
-      <em>Jurassic Park</em>.</p>
+      <p>
+        Computer games are great, and strategy games are the best <em>
+        Starcraft</em>, <em>Warcraft III</em>, <em>Supreme Commander</em>,
+        and <em>Fallout</em>
+        are some of my favorites. Filling out the rest are <em>Mario Kart 64</em>,
+         <em>Hotline Miami</em>, and <em>Dota2</em>.
+       </p>
 
-      <p><em>Apollo 13</em> is the best movie ever created by humanity.
-      <em>Star Wars: A New Hope</em> also ranks quite highly.</p>
+      <h5>Reading</h5>
 
-      <p><em>Star Trek</em>, especially <em>Deep Space Nine</em> and
-      <em>The Next Generation</em>, is my favorite television series.
-      <em>Aqua Teen Hunger Force</em> comes in as a close second.</p>
+      <p>
+        I'm most often found reading non-fiction books. Favorite genres include
+        WWII, general history, and space. Fiction genres include Sci-Fi and Graphic
+        Novels. Favorites include <em>Dune</em>, <em>The Culture Series</em>, and
+        <em>Jurassic Park</em>.
+      </p>
+
+      <h5>Movies</h5>
+
+      <p>
+        I don't watch many movies, but when I do, they're usually
+        Space-related. <em>Apollo 13</em> and
+        <em>Star Wars: A New Hope</em> are always in my watchlist.
+      </p>
+
+
+      <h5>Television</h5>
+      <p>
+        <em>Star Trek</em>, especially <em>Deep Space Nine</em> and
+        <em>The Next Generation</em>, is my favorite television series.
+        <em>Aqua Teen Hunger Force</em> comes in as a close second.
+      </p>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
       <h2>
