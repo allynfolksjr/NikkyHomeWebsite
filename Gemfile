@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.4.1'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0', '< 5.1'
+gem 'rails', '>= 5.2.0', '< 5.3'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'#, '~> 4.1.0'
 
 # Use Dalli for Memcache
 gem 'dalli'
