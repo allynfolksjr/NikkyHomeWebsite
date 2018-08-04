@@ -1,3 +1,10 @@
+# 1.5.0 (2018-08-03)
+
+* Ruby + Rails Updates
+* Support 280 char tweets and better formatting
+* Swap out image
+* Archive "Favorites" section
+
 # 1.4.1 (2017-10-24)
 
 * Copy updates
