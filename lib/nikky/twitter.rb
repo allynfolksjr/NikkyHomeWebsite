@@ -22,8 +22,10 @@ module Nikky
         'allynfolksjr',
         count: 200,
         exclude_replies: true,
-        include_rts: false
+        include_rts: false,
+        tweet_mode: 'extended'
         )
+
 
       # Hacky Way to not include a blog post in the twitter timeline on the site
       # Additionally, we don't want to include a subtweet, tweet with link, or
@@ -35,7 +37,7 @@ module Nikky
       end
 
       unrefined_tweets.map do |tweet|
-        Tweet.new(tweet.full_text, tweet.created_at, tweet.uri.to_s)
+        Tweet.new(tweet.attrs[:full_text], tweet.created_at, tweet.uri.to_s)
       end
 
     rescue StandardError => e
