@@ -1,3 +1,8 @@
+# 1.5.1 (2019-07-13)
+
+* Update photo
+* Update gems
+
 # 1.5.0 (2018-08-03)
 
 * Ruby + Rails Updates
