@@ -19,7 +19,7 @@ module Nikky
     def recent_photos
       nsid = get_nsid_for_username("allynfolksjr")
       unrefined_images = flickr.people.getPublicPhotos(user_id: nsid,
-        per_page: 5,
+        per_page: 25,
         extras: 'date_taken')
 
       unrefined_images.map do |image|
