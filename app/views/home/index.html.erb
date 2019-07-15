@@ -7,10 +7,9 @@
     <div class="small-12 medium-6 content">
       <h1>Nikky Southerland</h1>
       <p class="lead">
-        Lives in alt-reality Seattle.<br>
-        Multi-dimensional being.<br>
+        Seattle denizen.<br>
         Creates artisanal code.<br>
-        Respected by everyone.
+        Photographs and writes.
       </p>
       <%= render partial: 'tweets', locals: {tweets: @tweets} %>
     </div>
@@ -24,8 +23,8 @@
     </div>
     <div class="small-12 medium-7 small-order-1 medium-order-2">
       <p>
-        Check out the words I've been spewing out for <%= Time.now.year - 2004 %> years
-        now at <a href="http://nykida.net" target="_blank">nykida.net <%= fa_icon('external-link') %></a>.
+        I've been writing at my blog for <%= Time.now.year - 2004 %> years
+        now at <a href="http://nykida.net" target="_blank">nykida.net <%= fa_icon('external-link') %></a>. There's no particular theme. I usually write about space, travel, and culture.
       </p>
       <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
     </div>
@@ -41,7 +40,10 @@
     <div class="small-12 medium-5 small-order-1 medium-order-2">
       <h2>Photography</h2>
       <p>
-        Check out my pics at flickr.
+        I picked up taking pictures in High School. My favorite genres are
+        infrastructure, cities, nature, and wildlife. Shooting with a Pixel 3 and
+        Canon 6D. All of my work is available free of charge with a Creative
+        Commons license.
       </p>
       <p>
         <%= fa_icon 'flickr' %>
@@ -61,11 +63,12 @@
         Traveling
       </h2>
       <p>
-        Sometimes I'm out exploring. Countries I've visited include:
+        I started traveling on my own during college and haven't stopped since.
+        I've visited
         Italy, France, Germany, Austria, United Kingdom, Republic of Ireland,
         The Netherlands, Finland, Sweden, Denmark, Norway, Croatia,
         Czech Republic, Slovenia, Hungary, Poland,
-        Liechtenstein, Iceland, Switzerland, Spain,
+        Liechtenstein, Iceland, Switzerland, Spain, Belgium,
         Belize, Mexico, Canada, and Honduras.</p>
     </div>
      <div class="small-12 medium-7 small-order-2 medium-order-2 image">
@@ -79,7 +82,8 @@
     <div class="small-12 medium-7 small-order-2 medium-order-1">
       <p>
         I work as a full stack web developer at a European travel company.
-        Currently specializing in the Ruby on Rails framework and data integration.
+        Currently specializing in the Ruby on Rails framework and data integration
+        with a particular interest in shaping customer experiences.
       </p>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
@@ -109,10 +113,12 @@
       <%= image_tag 'minerva.jpg', alt: 'minerva the cat', width: '700' %>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
-      <h2>Cat Wrangler</h2>
+      <h2>Minerva</h2>
       <p>
-        I tend to the needs of a cat named <strong>Minerva</strong>. Her primary
-        skills are cuddling and hissing at everyone not named "Nikky."
+        I live with a cat named <strong>Minerva</strong>. Her primary
+        skills are cuddling and hissing at everyone not named "Nikky." She's
+        not particularly great at hunting the bugs around my apartment and
+        usually spends her days chirping at the crows that perch outside my windows.
       </p>
     </div>
   </div>
@@ -125,8 +131,10 @@
     </div>
     <div class="small-12 medium-7 small-order-2 medium-order-2">
       <p>
-        I've lived in Seattle for the past <%= Time.now.year - 2006 %> years.
-        It's a pretty cool place.
+        Seattle has been homefor the past <%= Time.now.year - 2006 %> years.
+        Much as changed over the years, but the water and mountains remain constants.
+        Being a Washington native, I don't mind the grey skies and rainy seasons.
+
       </p>
     </div>
   </div>
@@ -134,7 +142,7 @@
 
 <div class="white section">
   <div class="row align-middle">
-     <div class="small-12 medium-7 small-order-1 medium-order-1">
+     <div class="small-12 medium-7 small-order-2 medium-order-1">
       <p class="lead">
         <%= fa_icon 'envelope' %> <a href="mailto:site@nikkysoutherland.com">site@nikkysoutherland.com</a>
       </p>
@@ -159,12 +167,3 @@
     </div>
   </div>
 </div>
-
-<!--
-#    # #    #   ##   #####    #    # #####      ####
-#    # #    #  #  #    #      #    # #    #    #    #
-#    # ###### #    #   #      #    # #    #    #
-# ## # #    # ######   #      #    # #####     #  ###
-##  ## #    # #    #   #      #    # #         #    #
-#    # #    # #    #   #       ####  #          ####
--->
