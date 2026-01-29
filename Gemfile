@@ -13,6 +13,9 @@ gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'#, '~> 4.1.0'
 
+
+gem 'ostruct'
+
 # Use Dalli for Memcache
 gem 'dalli'
 

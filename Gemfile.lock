@@ -172,6 +172,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.0-x86_64-linux-gnu)
       racc (~> 1.4)
+    ostruct (0.6.3)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -303,6 +304,7 @@ DEPENDENCIES
   font-awesome-rails
   foundation-rails
   mutex_m
+  ostruct
   pry-rails
   puma
   rails (~> 7.0)
