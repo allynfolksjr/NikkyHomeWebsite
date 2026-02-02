@@ -19,6 +19,9 @@ gem 'ostruct'
 # Use Dalli for Memcache
 gem 'dalli'
 
+# Pin connection_pool to 2.x for compatibility with Rails 7.2
+gem 'connection_pool', '~> 2.4'
+
 # Required for later versions of ruby
 gem 'mutex_m'
 gem 'bigdecimal'
