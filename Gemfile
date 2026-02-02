@@ -15,7 +15,6 @@ gem 'coffee-rails'#, '~> 4.1.0'
 
 
 gem 'ostruct'
-
 # Use Dalli for Memcache
 gem 'dalli'
 
