@@ -22,7 +22,7 @@ module Nikky
     end
 
     def recent_photos
-      nsid = get_nsid_for_username("allynfolksjr")
+      nsid = get_nsid_for_username
       unrefined_images = flickr.people.getPublicPhotos(user_id: nsid,
         per_page: 100,
         extras: 'date_taken,o_dims')
@@ -42,7 +42,7 @@ module Nikky
 
     rescue StandardError => e
       Rails.logger.tagged('Flickr', 'API') do
-        Rails.logger.error{"Flickr Client Failure. #{e.inspect}"}
+        Rails.logger.error{"Flickr client failure: #{e.inspect}"}
       end
       []
     end
@@ -52,7 +52,7 @@ module Nikky
     def photo_exif(photo_id)
       flickr.photos.getExif(photo_id: photo_id)['exif'] || []
     rescue StandardError => e
-      Rails.logger.warn("Flickr getExif failure. #{e.inspect}")
+      Rails.logger.warn("Flickr getExif failure: #{e.inspect}")
       []
     end
 
@@ -66,7 +66,7 @@ module Nikky
         location: gps_location(exif)
       }
     rescue StandardError => e
-      Rails.logger.warn("Flickr metadata failure. #{e.inspect}")
+      Rails.logger.warn("Flickr metadata failure: #{e.inspect}")
       {}
     end
 
@@ -101,7 +101,7 @@ module Nikky
       "#{latitude}, #{longitude}"
     end
 
-    def get_nsid_for_username(username)
+    def get_nsid_for_username
       flickr.people.findByUsername(username: 'allynfolksjr')["nsid"]
     end
   end

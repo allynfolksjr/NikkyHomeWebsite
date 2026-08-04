@@ -39,7 +39,7 @@
     <div class="small-12 medium-7 small-order-2 medium-order-1">
       <p>
         I work as a team/technical lead full-stack developer, specializing in Ruby on Rails. I have a particular interest in
-        understanding users and building empathy with their use cases.
+        understanding users and building empathy for their use cases.
       </p>
       <p>Engineering Talks:</p>
       <ul>
@@ -61,10 +61,10 @@
       <h2 id="photography-heading">Photography</h2>
       <p>
         One of the ways I explore the world around me is through the lens of a camera. I shoot both film and digital with a wide
-        array of cameras. All of my black/white film is self-developed.
+        array of cameras. All of my black-and-white film is self-developed.
       </p>
       <p><i class="fa-brands fa-flickr" aria-hidden="true"></i>
-        <%= link_to "View all Photos at Flickr", 'https://flickr.com/photos/allynfolksjr', target: '_blank', rel: 'noopener' %>
+        <%= link_to "View all photos on Flickr", 'https://flickr.com/photos/allynfolksjr', target: '_blank', rel: 'noopener noreferrer' %>
         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
       </p>
     </div>
@@ -86,7 +86,7 @@
 <section class="blue section" aria-labelledby="ham-heading">
   <div class="row align-middle">
     <div class="small-12 medium-7 small-order-2 medium-order-1">
-      <p>I'm a General Class Amatuer Radio Operator mostly exploring APRS and digital modes. <a href="https://www.qrz.com/db/N1KKY" target="_blank" rel="noopener">View my profile on QRZ.com</a></p>
+      <p>I'm a General Class Amateur Radio Operator mostly exploring APRS and digital modes. <a href="https://www.qrz.com/db/N1KKY" target="_blank" rel="noopener noreferrer">View my profile on QRZ.com</a></p>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2"><h2 id="ham-heading">N1KKY</h2></div>
   </div>
@@ -97,7 +97,7 @@
     <div class="small-12 medium-5"><h2 id="uw-heading">University of Washington</h2></div>
     <div class="small-12 medium-7">
       <p>
-        I have a Bachelor of Arts from University of Washington in Seattle, and majored in <em>Law, Societies, and Justice</em>
+        I have a Bachelor of Arts from the University of Washington in Seattle, and majored in <em>Law, Societies, and Justice</em>
         with minors in <em>Political Science</em> and <em>Human Rights</em>.
       </p>
     </div>
@@ -110,7 +110,7 @@
     <div class="small-12 medium-7">
       <p>
         I've been writing at my blog for <%= Time.current.year - 2004 %> years now at
-        <a href="http://nykida.net" target="_blank" rel="noopener">nykida.net <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
+        <a href="https://nykida.net" target="_blank" rel="noopener noreferrer">nykida.net <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
         There's no particular theme.
       </p>
       <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
@@ -133,12 +133,3 @@
     </div>
   </div>
 </section>
-
-<footer class="purple">
-  <div class="row"><div class="small-12"><small>
-    Site created by Nikky Southerland with help from
-    <a href="https://rubyonrails.org" target="_blank" rel="noopener">Ruby on Rails</a>,
-    <a href="http://foundation.zurb.com/" target="_blank" rel="noopener">Zurb Foundation</a>, and
-    <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome 6</a>.
-  </small></div></div>
-</footer>

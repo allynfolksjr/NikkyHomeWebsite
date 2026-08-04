@@ -34,8 +34,8 @@ module Nikky
         )
       end
     rescue StandardError => e
-      Rails.logger.tagged('WordPress', 'API') do
-        Rails.logger.error{"WordPress Client Failure. #{e.inspect}"}
+      Rails.logger.tagged('Wordpress', 'API') do
+        Rails.logger.error{"Wordpress client failure: #{e.inspect}"}
       end
       []
     end
