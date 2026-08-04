@@ -16,8 +16,9 @@ module Nikky
     end
 
     def initialize
-      FlickRaw.api_key = ENV['FLICKR_API_KEY']
-      FlickRaw.shared_secret = ENV['FLICKR_SECRET']
+      credentials = Rails.application.credentials.fetch(:flickr)
+      FlickRaw.api_key = credentials.fetch(:api_key)
+      FlickRaw.shared_secret = credentials.fetch(:secret)
     end
 
     def recent_photos

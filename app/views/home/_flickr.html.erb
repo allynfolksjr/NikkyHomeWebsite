@@ -1,11 +1,11 @@
 <% if photos.present? %>
   <% carousel_photos = photos.first(8) %>
-  <div class="photography-viewer" data-photography-viewer>
-    <div class="photography-carousel" data-photography-carousel>
-      <div class="photography-track" data-photography-track>
-        <% carousel_photos.each do |photo| %>
-          <div class="photography-slide">
-            <%= link_to image_tag(photo.image_url, alt: photo.title.presence || 'Recent Flickr photograph'), photo.url, target: '_blank', rel: 'noopener' %>
+  <div class="photography-viewer" data-photography-viewer tabindex="0" role="region" aria-roledescription="carousel" aria-label="Recent Flickr photographs" aria-keyshortcuts="ArrowLeft ArrowRight Home End">
+    <div class="photography-carousel">
+      <div class="photography-track" data-photography-track role="list" aria-live="polite">
+        <% carousel_photos.each_with_index do |photo, index| %>
+          <div class="photography-slide" data-photography-slide role="group" aria-roledescription="slide" aria-label="Slide <%= index + 1 %> of <%= carousel_photos.length %>" aria-hidden="<%= index != 0 %>">
+            <%= link_to image_tag(photo.image_url, alt: photo.title.present? ? '' : 'Recent Flickr photograph'), photo.url, target: '_blank', rel: 'noopener noreferrer', tabindex: index.zero? ? '0' : '-1', aria: { label: photo.title.presence || 'Open photograph on Flickr' } %>
             <% if photo.metadata.values.any?(&:present?) %>
               <div class="photography-metadata">
                 <strong><%= photo.title %></strong>
@@ -22,6 +22,10 @@
       </div>
       <button class="carousel-control previous" type="button" data-carousel-previous aria-label="Previous photograph">&#8592;</button>
       <button class="carousel-control next" type="button" data-carousel-next aria-label="Next photograph">&#8594;</button>
+    </div>
+    <div class="photography-controls">
+      <span data-carousel-indicator aria-live="polite">1 of <%= carousel_photos.length %></span>
+      <button class="carousel-pause" type="button" data-carousel-pause aria-label="Pause slideshow">Pause</button>
     </div>
   </div>
 <% else %>

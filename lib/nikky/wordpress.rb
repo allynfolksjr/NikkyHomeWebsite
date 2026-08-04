@@ -12,9 +12,10 @@ module Nikky
     end
 
     def initialize
-      host = ENV['WORDPRESS_HOST'] || raise('WORDPRESS_HOST not specified')
-      username = ENV['WORDPRESS_USERNAME'] || raise('WORDPRESS_USERNAME not specified')
-      password = ENV['WORDPRESS_PASSWORD'] || raise('WORDPRESS_PASSWORD not specified')
+      credentials = Rails.application.credentials.fetch(:wordpress)
+      host = credentials.fetch(:host)
+      username = credentials.fetch(:username)
+      password = credentials.fetch(:password)
 
       @client = Rubypress::Client.new(use_ssl: true,
         host: host,

@@ -1,5 +1,5 @@
-<% content_for(:title){'Nikky'} %>
-<div class="head">
+<% content_for(:title){'Nikky Southerland'} %>
+<header class="head">
   <div class="row align-top">
     <div class="small-12 medium-6">
       <%= image_tag 'nikky.jpg', alt: 'Nikky Southerland' %>
@@ -7,9 +7,9 @@
     <div class="small-12 medium-6 content">
       <h1>Nikky Southerland</h1>
       <p class="lead">
-        Philadelphian<br>
-        Software Engineering Leader<br>
-        Photographer
+        <span class="lead-line">Philadelphian</span>
+        <span class="lead-line">Software Engineering Leader</span>
+        <span class="lead-line">Photographer</span>
       </p>
       <nav class="contact-links" aria-label="Contact and social links">
         <a href="mailto:site@nikkysoutherland.com" aria-label="Email Nikky">
@@ -32,33 +32,33 @@
       </nav>
     </div>
   </div>
-</div>
+</header>
 
-<div class="purple section">
+<section class="purple section" aria-labelledby="engineering-heading">
   <div class="row align-middle">
     <div class="small-12 medium-7 small-order-2 medium-order-1">
       <p>
         I work as a team/technical lead full-stack developer, specializing in Ruby on Rails. I have a particular interest in
         understanding users and building empathy with their use cases.
-      <p>
-        Engineering Talks:
-        <ul>
-          <li><a href="https://www.rubyevents.org/talks/spaceships-radiation-therapy-and-power-users" target="_blank" rel="noopener"> Spaceships, Radiation Therapy, and Power Users (Blastoff Rails 2026)</a></li>
-        </p>
+      </p>
+      <p>Engineering Talks:</p>
+      <ul>
+        <li><a href="https://www.rubyevents.org/talks/spaceships-radiation-therapy-and-power-users" target="_blank" rel="noopener noreferrer">Spaceships, Radiation Therapy, and Power Users (Blastoff Rails 2026)</a></li>
+      </ul>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
-      <h2>Engineering</h2>
+      <h2 id="engineering-heading">Engineering</h2>
     </div>
   </div>
-</div>
+</section>
 
-<div class="blue section no-padding">
+<section class="blue section no-padding" aria-labelledby="photography-heading">
   <div class="row align-middle">
     <div class="small-12 medium-7 small-order-1 medium-order-1 image photography-image">
       <%= render partial: 'flickr', locals: {photos: @flickr_photos} %>
     </div>
     <div class="small-12 medium-5 small-order-2 medium-order-2 photography-copy">
-      <h2>Photography</h2>
+      <h2 id="photography-heading">Photography</h2>
       <p>
         One of the ways I explore the world around me is through the lens of a camera. I shoot both film and digital with a wide
         array of cameras. All of my black/white film is self-developed.
@@ -69,11 +69,11 @@
       </p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="purple section">
+<section class="purple section" aria-labelledby="philadelphia-heading">
   <div class="row align-middle">
-    <div class="small-12 medium-5"><h2>Philadelphia</h2></div>
+    <div class="small-12 medium-5"><h2 id="philadelphia-heading">Philadelphia</h2></div>
     <div class="small-12 medium-7">
       <p>
         Seattle was my home for 18 years, but now I live in Philadelphia! Being on the East Coast has been a revelation. Much has changed over the years,
@@ -81,20 +81,20 @@
       </p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="blue section">
+<section class="blue section" aria-labelledby="ham-heading">
   <div class="row align-middle">
     <div class="small-12 medium-7 small-order-2 medium-order-1">
       <p>I'm a General Class Amatuer Radio Operator mostly exploring APRS and digital modes. <a href="https://www.qrz.com/db/N1KKY" target="_blank" rel="noopener">View my profile on QRZ.com</a></p>
     </div>
-    <div class="small-12 medium-5 small-order-1 medium-order-2"><h2>N1KKY</h2></div>
+    <div class="small-12 medium-5 small-order-1 medium-order-2"><h2 id="ham-heading">N1KKY</h2></div>
   </div>
-</div>
+</section>
 
-<div class="white section">
+<section class="white section" aria-labelledby="uw-heading">
   <div class="row align-middle">
-    <div class="small-12 medium-5"><h2>University of Washington</h2></div>
+    <div class="small-12 medium-5"><h2 id="uw-heading">University of Washington</h2></div>
     <div class="small-12 medium-7">
       <p>
         I have a Bachelor of Arts from University of Washington in Seattle, and majored in <em>Law, Societies, and Justice</em>
@@ -102,29 +102,29 @@
       </p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="purple section">
+<section class="purple section" aria-labelledby="blogging-heading">
   <div class="row align-middle">
-    <div class="small-12 medium-5"><h2>Blogging</h2></div>
+    <div class="small-12 medium-5"><h2 id="blogging-heading">Blogging</h2></div>
     <div class="small-12 medium-7">
       <p>
-        I've been writing at my blog for <%= Time.now.year - 2004 %> years now at
+        I've been writing at my blog for <%= Time.current.year - 2004 %> years now at
         <a href="http://nykida.net" target="_blank" rel="noopener">nykida.net <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
         There's no particular theme.
       </p>
       <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
     </div>
   </div>
-</div>
+</section>
 
-<div class="blue section no-padding">
+<section class="blue section no-padding" aria-labelledby="minerva-heading">
   <div class="row align-middle">
     <div class="small-12 medium-7 small-order-1 medium-order-1 image">
       <%= image_tag 'minerva.jpg', alt: 'Minerva the cat', width: '700' %>
     </div>
     <div class="small-12 medium-5 small-order-2 medium-order-2">
-      <h2>Minerva</h2>
+      <h2 id="minerva-heading">Minerva</h2>
       <p>
         I live with a cat named <strong>Minerva</strong>. Her primary skills are cuddling and hissing at everyone.
         She's not particularly great at hunting the bugs around our house and usually spends her days chirping at
@@ -132,13 +132,13 @@
       </p>
     </div>
   </div>
-</div>
+</section>
 
-<div class="purple">
+<footer class="purple">
   <div class="row"><div class="small-12"><small>
     Site created by Nikky Southerland with help from
     <a href="https://rubyonrails.org" target="_blank" rel="noopener">Ruby on Rails</a>,
     <a href="http://foundation.zurb.com/" target="_blank" rel="noopener">Zurb Foundation</a>, and
     <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome 6</a>.
   </small></div></div>
-</div>
+</footer>

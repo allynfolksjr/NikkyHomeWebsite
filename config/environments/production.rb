@@ -57,14 +57,19 @@ Rails.application.configure do
     config.logger = ActiveSupport::TaggedLogging.new(Logger.new(STDOUT))
   end
 
-  config.cache_store = :mem_cache_store,
-                    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
-                    {:username => ENV["MEMCACHIER_USERNAME"],
-                     :password => ENV["MEMCACHIER_PASSWORD"],
-                     :failover => true,
-                     :socket_timeout => 1.5,
-                     :socket_failure_delay => 0.2
-                    }
+  cache_servers = (ENV["MEMCACHIER_SERVERS"] || "").split(",").map(&:strip).reject(&:empty?)
+  if ENV["CACHE_STORE"] == "memory" || cache_servers.empty?
+    config.cache_store = :memory_store
+  else
+    config.cache_store = :mem_cache_store,
+                      cache_servers,
+                      username: ENV["MEMCACHIER_USERNAME"],
+                      password: ENV["MEMCACHIER_PASSWORD"],
+                      failover: true,
+                      socket_timeout: 0.25,
+                      socket_failure_delay: 0.2,
+                      down_retry_delay: 60
+  end
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque

@@ -3,31 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nikky Southerland: software engineering, photography, writing, and life in Philadelphia." />
+    <meta name="theme-color" content="#39275b" />
 
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic|Sanchez:400,400italic">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <%= yield %>
+    <main id="main-content">
+      <%= yield %>
+    </main>
 
   </body>
-  <footer>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-39615471-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-  </footer>
 </html>

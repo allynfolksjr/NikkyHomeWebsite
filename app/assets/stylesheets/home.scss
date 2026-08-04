@@ -3,21 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 a {
+  color: #075985;
+
   &:hover {
     text-decoration: underline;
   }
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Sanchez", serif;
+  font-family: "Sanchez", Georgia, serif;
+  letter-spacing: -0.01em;
 }
 
-p, span, a {
-  font-family: "Source Sans Pro", sans-serif;
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: .75rem 1rem;
+  background: #fff;
+  color: #075985;
+  transform: translateY(-100%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .head {
@@ -44,20 +58,28 @@ p, span, a {
       fill: currentColor;
     }
   }
+
+  .lead-line {
+    display: block;
+  }
 }
 
 .purple {
   background-color: #39275B;
   color: white;
+
+  a, a:visited, a:hover {
+    color: #fff;
+  }
 }
 
 .blue {
-  background-color: #2199e8;
+  background-color: #12689f;
   color: white;
   a {
-    color: #39275B;
+    color: #fff;
     &:visited, &:hover {
-      color: #39275B;
+      color: #fff;
     }
   }
   i {
@@ -66,7 +88,7 @@ p, span, a {
 }
 
 i {
-  color: #2199e8;
+  color: #075985;
 }
 
 .section {
@@ -101,6 +123,11 @@ i {
   background: #111;
 }
 
+.photography-viewer:focus {
+  outline: 3px solid #075985;
+  outline-offset: -3px;
+}
+
 .photography-image {
   align-self: flex-start;
 }
@@ -112,14 +139,12 @@ i {
 
 .photography-track {
   display: flex;
-  transition: transform .4s ease;
 }
 
 .photography-slide {
   flex: 0 0 100%;
 }
 
-.photography-slide img,
 .photography-slide img {
   display: block;
   width: 100%;
@@ -158,8 +183,57 @@ i {
   font-weight: 400;
 }
 
+.photography-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .4rem .7rem;
+  background: #111;
+  color: #ccc;
+  font-size: .85rem;
+}
+
+.carousel-pause {
+  padding: .2rem .5rem;
+  border: 1px solid #aaa;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.blog-post h3 {
+  margin-bottom: .15rem;
+}
+
 button {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: inherit;
+}
+
+.photography-metadata span {
+  color: #ccc;
+}
+
+.photography-metadata:focus {
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+.carousel-control:focus-visible,
+.photography-slide a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .photography-track {
+    transition: transform .4s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @media screen and (max-width: 39.9375em) {

@@ -1,9 +1,11 @@
 <% if posts.present? %>
   <% posts.first(3).each do |post| %>
-    <h5>
+    <article class="blog-post">
+      <h3>
       <i class="fa-brands fa-wordpress" aria-hidden="true"></i>
-      <%= link_to post.title, post.url, target: '_blank' %>
+      <%= link_to post.title, post.url, target: '_blank', rel: 'noopener noreferrer' %>
+      </h3>
       <small>Posted <%= time_ago_in_words post.posted_at %> ago</small>
-    </h5>
+    </article>
   <% end %>
 <% end %>

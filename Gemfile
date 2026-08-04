@@ -29,9 +29,6 @@ gem 'sass-embedded'
 # Fetch Recent Flickrs
 gem 'flickraw'
 
-# Configuration
-gem 'figaro'
-
 # Pry
 gem 'pry-rails'
 gem 'awesome_print'
@@ -51,5 +48,3 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
-
-gem 'rails_12factor', group: :production
