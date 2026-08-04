@@ -61,14 +61,18 @@ Rails.application.configure do
   if ENV["CACHE_STORE"] == "memory" || cache_servers.empty?
     config.cache_store = :memory_store
   else
-    config.cache_store = :mem_cache_store,
-                      cache_servers,
-                      username: ENV["MEMCACHIER_USERNAME"],
-                      password: ENV["MEMCACHIER_PASSWORD"],
-                      failover: true,
-                      socket_timeout: 0.25,
-                      socket_failure_delay: 0.2,
-                      down_retry_delay: 60
+    config.cache_store = [
+      :mem_cache_store,
+      cache_servers,
+      {
+        username: ENV["MEMCACHIER_USERNAME"],
+        password: ENV["MEMCACHIER_PASSWORD"],
+        failover: true,
+        socket_timeout: 0.25,
+        socket_failure_delay: 0.2,
+        down_retry_delay: 60
+      }
+    ]
   end
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
