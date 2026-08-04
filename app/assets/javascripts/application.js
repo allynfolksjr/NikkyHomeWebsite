@@ -14,7 +14,6 @@
 
 (function() {
   function setupPhotographyViewer(viewer) {
-    var track = viewer.querySelector('[data-photography-track]');
     var slides = viewer.querySelectorAll('.photography-slide');
     var links = viewer.querySelectorAll('.photography-slide a');
     var previous = viewer.querySelector('[data-carousel-previous]');
@@ -28,10 +27,10 @@
 
     function showSlide(index, moveFocus) {
       current = (index + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
       Array.prototype.forEach.call(slides, function(slide, index) {
         var active = index === current;
         slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+        slide.hidden = !active;
         links[index].tabIndex = active ? 0 : -1;
       });
       indicator.textContent = (current + 1) + ' of ' + slides.length;

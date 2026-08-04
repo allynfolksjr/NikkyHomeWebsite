@@ -4,7 +4,7 @@
     <div class="photography-carousel">
       <div class="photography-track" data-photography-track role="list" aria-live="polite">
         <% carousel_photos.each_with_index do |photo, index| %>
-          <div class="photography-slide" data-photography-slide role="group" aria-roledescription="slide" aria-label="Slide <%= index + 1 %> of <%= carousel_photos.length %>" aria-hidden="<%= index != 0 %>">
+          <div class="photography-slide" data-photography-slide role="group" aria-roledescription="slide" aria-label="Slide <%= index + 1 %> of <%= carousel_photos.length %>" aria-hidden="<%= index != 0 %>" <%= 'hidden' if index != 0 %>>
             <%= link_to image_tag(photo.image_url, alt: photo.title.present? ? '' : 'Recent Flickr photograph'), photo.url, target: '_blank', rel: 'noopener noreferrer', tabindex: index.zero? ? '0' : '-1', aria: { label: photo.title.presence || 'Open photograph on Flickr' } %>
             <% if photo.metadata.values.any?(&:present?) %>
               <div class="photography-metadata">
