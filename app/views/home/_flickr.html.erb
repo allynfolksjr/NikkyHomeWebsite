@@ -1,9 +1,33 @@
 <% if photos.present? %>
-  <% photo = photos.sample %>
-  <%= link_to image_tag(photo.image_url, alt: 'recentflickr photo', width: 700),
-        photo.url,
-        target: '_blank'
-  %>
+  <% carousel_photos = photos.first(8) %>
+  <div class="photography-viewer" data-photography-viewer>
+    <div class="photography-carousel" data-photography-carousel>
+      <div class="photography-track" data-photography-track>
+        <% carousel_photos.each do |photo| %>
+          <div class="photography-slide">
+            <%= link_to image_tag(photo.image_url, alt: photo.title.presence || 'Recent Flickr photograph'), photo.url, target: '_blank', rel: 'noopener' %>
+            <% if photo.metadata.values.any?(&:present?) %>
+              <div class="photography-metadata">
+                <% if photo.title.present? %><strong><%= photo.title %></strong><% end %>
+                <span>
+                  <%= [
+                    ("Camera: #{photo.metadata[:camera]}" if photo.metadata[:camera].present?),
+                    ("Lens: #{photo.metadata[:lens]}" if photo.metadata[:lens].present?),
+                    ("f/#{photo.metadata[:aperture]}" if photo.metadata[:aperture].present?),
+                    ("#{photo.metadata[:shutter_speed]} sec" if photo.metadata[:shutter_speed].present?),
+                    ("ISO #{photo.metadata[:iso]}" if photo.metadata[:iso].present?),
+                    photo.metadata[:location]
+                  ].compact.join(' · ') %>
+                </span>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <button class="carousel-control previous" type="button" data-carousel-previous aria-label="Previous photograph">&#8592;</button>
+      <button class="carousel-control next" type="button" data-carousel-next aria-label="Next photograph">&#8594;</button>
+    </div>
+  </div>
 <% else %>
-  <%= image_tag 'photography.jpg', alt: 'mountains', width: '700' %>
+  <%= image_tag 'photography.jpg', alt: 'Mountains', width: '700' %>
 <% end %>

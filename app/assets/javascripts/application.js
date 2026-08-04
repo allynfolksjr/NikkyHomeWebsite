@@ -11,3 +11,38 @@
 // about supported directives.
 //
 //= require_tree .
+
+(function() {
+  function setupPhotographyViewer(viewer) {
+    var track = viewer.querySelector('[data-photography-track]');
+    var slides = viewer.querySelectorAll('.photography-slide');
+    var current = 0;
+    var timer;
+
+    function showSlide(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    }
+
+    function startRotation() {
+      window.clearInterval(timer);
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        timer = window.setInterval(function() { showSlide(current + 1); }, 5000);
+      }
+    }
+
+    viewer.querySelector('[data-carousel-previous]').addEventListener('click', function() {
+      showSlide(current - 1);
+      startRotation();
+    });
+    viewer.querySelector('[data-carousel-next]').addEventListener('click', function() {
+      showSlide(current + 1);
+      startRotation();
+    });
+    startRotation();
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('[data-photography-viewer]').forEach(setupPhotographyViewer);
+  });
+})();

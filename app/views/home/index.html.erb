@@ -2,7 +2,7 @@
 <div class="head">
   <div class="row align-top">
     <div class="small-12 medium-6">
-      <%= image_tag 'nikky.jpg', alt: 'nikky' %>
+      <%= image_tag 'nikky.jpg', alt: 'Nikky Southerland' %>
     </div>
     <div class="small-12 medium-6 content">
       <h1>Nikky Southerland</h1>
@@ -11,70 +11,25 @@
         Software Engineering Leader.<br>
         Photographs and writes.
       </p>
-      <p><%= fa_icon 'cloud' %> <a href="https://bsky.app/profile/nykida.net" target="_blank">@nykida.net</a></p>
-      <p><%= fa_icon 'instagram' %> <a href="https://instagram.com/allynfolksjr" target="_blank">@allynfolksjr</a></p>
-    </div>
-  </div>
-</div>
-
-<div class="purple section">
-  <div class="row align-middle">
-    <div class="small-12 medium-5 small-order-1 medium-order-1">
-      <h2>Blogging</h2>
-    </div>
-    <div class="small-12 medium-7 small-order-1 medium-order-2">
-      <p>
-        I've been writing at my blog for <%= Time.now.year - 2004 %> years
-        now at <a href="http://nykida.net" target="_blank">nykida.net <%= fa_icon('external-link') %></a>. There's no particular theme.
-      </p>
-      <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
-    </div>
-  </div>
-</div>
-
-<div class="blue section no-padding">
-  <div class="row align-middle">
-
-    <div class="small-12 medium-7 small-order-2 medium-order-1 image">
-      <%= render partial: 'flickr', locals: {photos: @flickr_photos} %>
-    </div>
-    <div class="small-12 medium-5 small-order-1 medium-order-2">
-      <h2>Photography</h2>
-      <p>
-        I take pictures and sometimes post them to flickr. In the last few years I've started
-        developing my own black and white film, and it's been a lot of fun to rediscover analog formats.
-      </p>
-      <p>
-        <%= fa_icon 'flickr' %>
-        <%= link_to 'Nikky\'s Flickr', 'https://flickr.com/photos/allynfolksjr', target:
-        '_blank' %>
-        <%= fa_icon('external-link') %>
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="white section no-padding">
-  <div class="row align-middle">
-
-    <div class="small-12 medium-5 small-order-1 medium-order-1">
-      <h2>
-        Traveling
-      </h2>
-      <p>
-        I grew up doing a lot of camping and exploration of the outdoors. After visting Rome in college,
-        a new kind of travel bug emerged. I've seen a lot of Europe, and always try to find new excuses to
-        explore new places. I'm excited to see what's next!
-        <%# I started traveling on my own during college and haven't stopped since. %>
-        <%# I've visited
-        Italy, France, Germany, Austria, United Kingdom, Republic of Ireland,
-        The Netherlands, Finland, Sweden, Denmark, Norway, Croatia,
-        Czech Republic, Slovenia, Hungary, Poland,
-        Liechtenstein, Iceland, Switzerland, Spain, Belgium,
-        Belize, Mexico, Canada, and Honduras.</p> %>
-    </div>
-     <div class="small-12 medium-7 small-order-2 medium-order-2 image">
-      <%= image_tag 'travel.jpg', alt: 'nikky in front of buildings', width: '700' %>
+      <nav class="contact-links" aria-label="Contact and social links">
+        <a href="mailto:site@nikkysoutherland.com" aria-label="Email Nikky">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>site@nikkysoutherland.com</span>
+        </a>
+        <a href="https://bsky.app/profile/nykida.net" target="_blank" rel="noopener" aria-label="Nikky on Bluesky">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.8c2.6 2 5.1 6.1 6.8 8.2 1.7-2.1 4.2-6.2 6.8-8.2C20.7 1.9 23.5 1.2 23.5 4.5c0 .7-.4 5.5-.6 6.3-.8 2.8-3.5 3.5-5.9 3.1 4.2.7 5.3 3.1 3 5.5-4.3 4.5-6.2-1.1-7.9-3.5-1.7 2.4-3.6 8-7.9 3.5-2.3-2.4-1.2-4.8 3-5.5-2.4.4-5.1-.3-5.9-3.1-.2-.8-.6-5.6-.6-6.3C.7 1.2 3.5 1.9 5.2 3.8Z"/></svg>
+          <span>@nykida.net</span>
+        </a>
+        <a href="https://instagram.com/allynfolksjr" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a href="https://flickr.com/photos/allynfolksjr" target="_blank" rel="noopener">
+          <i class="fa-brands fa-flickr" aria-hidden="true"></i> Flickr
+        </a>
+      </nav>
     </div>
   </div>
 </div>
@@ -88,38 +43,75 @@
       </p>
     </div>
     <div class="small-12 medium-5 small-order-1 medium-order-2">
-      <h2>Software Engineer</h2>
+      <h2>Engineering</h2>
     </div>
   </div>
 </div>
 
-<div class="blue section">
+<div class="blue section no-padding">
   <div class="row align-middle">
-    <div class="small-12 medium-7 small-order-2 medium-order-2">
-      <p>
-        I have a Bachelor of Arts from University of Washington in Seattle, and
-        majored in <em>Law, Societies, and Justice</em> with
-        minors in <em>Political Science</em> and <em>Human Rights</em>.
-      </p>
+    <div class="small-12 medium-7 small-order-1 medium-order-1 image photography-image">
+      <%= render partial: 'flickr', locals: {photos: @flickr_photos} %>
     </div>
-    <div class="small-12 medium-5 small-order-1 medium-order-1">
-      <h2>University of Washington</h2>
+    <div class="small-12 medium-5 small-order-2 medium-order-2 photography-copy">
+      <h2>Photography</h2>
+      <p>
+        I take pictures and sometimes post them to Flickr. In the last few years I've started
+        developing my own black and white film, and it's been a lot of fun to rediscover analog formats.
+      </p>
+      <p><i class="fa-brands fa-flickr" aria-hidden="true"></i>
+        <%= link_to "Nikky's Flickr", 'https://flickr.com/photos/allynfolksjr', target: '_blank', rel: 'noopener' %>
+        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+      </p>
     </div>
   </div>
 </div>
 
 <div class="white section no-padding">
   <div class="row align-middle">
-    <div class="small-12 medium-7 small-order-2 medium-order-1 image">
-      <%= image_tag 'minerva.jpg', alt: 'minerva the cat', width: '700' %>
-    </div>
-    <div class="small-12 medium-5 small-order-1 medium-order-2">
-      <h2>Minerva</h2>
+    <div class="small-12 medium-5 small-order-1 medium-order-1">
+      <h2>Traveling</h2>
       <p>
-        I live with a cat named <strong>Minerva</strong>. Her primary
-        skills are cuddling and hissing at everyone. She's
-        not particularly great at hunting the bugs around our apartment and
-        usually spends her days chirping at the crows that perch outside our windows. (Sometimes she can catch gnats)
+        I grew up doing a lot of camping and exploration of the outdoors. After visiting Rome in college,
+        a new kind of travel bug emerged. I've seen a lot of Europe, and always try to find new excuses to
+        explore new places. I'm excited to see what's next!
+      </p>
+    </div>
+    <div class="small-12 medium-7 small-order-2 medium-order-2 image">
+      <%= image_tag 'travel.jpg', alt: 'Nikky in front of buildings', width: '700' %>
+    </div>
+  </div>
+</div>
+
+<div class="purple section">
+  <div class="row align-middle">
+    <div class="small-12 medium-5"><h2>Philadelphia</h2></div>
+    <div class="small-12 medium-7">
+      <p>
+        Seattle was my home for 18 years, but now I live in Philadelphia! Much has changed over the years,
+        but the water and mountains remain constants. Being a Washington native, I don't mind the grey skies and rainy seasons.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="blue section">
+  <div class="row align-middle">
+    <div class="small-12 medium-7 small-order-2 medium-order-1">
+      <p>I'm an amateur radio hobbyist exploring the airwaves from Philadelphia. More about my equipment, projects, and call sign is coming soon.</p>
+      <p><strong>Call sign:</strong> TBD</p>
+    </div>
+    <div class="small-12 medium-5 small-order-1 medium-order-2"><h2>HAM Radio</h2></div>
+  </div>
+</div>
+
+<div class="white section">
+  <div class="row align-middle">
+    <div class="small-12 medium-5"><h2>University of Washington</h2></div>
+    <div class="small-12 medium-7">
+      <p>
+        I have a Bachelor of Arts from University of Washington in Seattle, and majored in <em>Law, Societies, and Justice</em>
+        with minors in <em>Political Science</em> and <em>Human Rights</em>.
       </p>
     </div>
   </div>
@@ -127,44 +119,39 @@
 
 <div class="purple section">
   <div class="row align-middle">
-    <div class="small-12 medium-5 small-order-1 medium-order-1">
-      <h2>Philadelphia</h2>
-    </div>
-    <div class="small-12 medium-7 small-order-2 medium-order-2">
+    <div class="small-12 medium-5"><h2>Blogging</h2></div>
+    <div class="small-12 medium-7">
       <p>
-        Seattle was my home for 18 years, but now I live in Philadelphia!
-        Much has changed over the years, but the water and mountains remain constants.
-        Being a Washington native, I don't mind the grey skies and rainy seasons.
-
+        I've been writing at my blog for <%= Time.now.year - 2004 %> years now at
+        <a href="http://nykida.net" target="_blank" rel="noopener">nykida.net <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>.
+        There's no particular theme.
       </p>
+      <%= render partial: 'blog_posts', locals: {posts: @wordpress_posts} %>
     </div>
   </div>
 </div>
 
-<div class="white section">
+<div class="blue section no-padding">
   <div class="row align-middle">
-     <div class="small-12 medium-7 small-order-2 medium-order-1">
-      <p class="lead">
-        <%= fa_icon 'envelope' %> <a href="mailto:site@nikkysoutherland.com">site@nikkysoutherland.com</a>
-      </p>
+    <div class="small-12 medium-7 small-order-1 medium-order-1 image">
+      <%= image_tag 'minerva.jpg', alt: 'Minerva the cat', width: '700' %>
     </div>
-    <div class="small-12 medium-5 small-order-1 medium-order-1">
-      <h2>Contact Me</h2>
+    <div class="small-12 medium-5 small-order-2 medium-order-2">
+      <h2>Minerva</h2>
+      <p>
+        I live with a cat named <strong>Minerva</strong>. Her primary skills are cuddling and hissing at everyone.
+        She's not particularly great at hunting the bugs around our apartment and usually spends her days chirping at
+        the crows that perch outside our windows. (Sometimes she can catch gnats.)
+      </p>
     </div>
   </div>
 </div>
 
 <div class="purple">
-  <div class="row">
-    <div class="small-12">
-      <small>
-        Site created by Nikky Southerland with help from
-        <a href="https://rubyonrails.org" target="_blank">Ruby on Rails</a>,
-        <a href="http://foundation.zurb.com/" target="_blank">Zerb Foundation</a>,
-        and
-        <a href="https://fortawesome.github.io/Font-Awesome/ " target="_blank">
-          Font Awesome</a>.
-      </small>
-    </div>
-  </div>
+  <div class="row"><div class="small-12"><small>
+    Site created by Nikky Southerland with help from
+    <a href="https://rubyonrails.org" target="_blank" rel="noopener">Ruby on Rails</a>,
+    <a href="http://foundation.zurb.com/" target="_blank" rel="noopener">Zurb Foundation</a>, and
+    <a href="https://fontawesome.com" target="_blank" rel="noopener">Font Awesome 6</a>.
+  </small></div></div>
 </div>
