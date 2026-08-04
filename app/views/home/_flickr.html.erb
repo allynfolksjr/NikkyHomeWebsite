@@ -8,17 +8,13 @@
             <%= link_to image_tag(photo.image_url, alt: photo.title.presence || 'Recent Flickr photograph'), photo.url, target: '_blank', rel: 'noopener' %>
             <% if photo.metadata.values.any?(&:present?) %>
               <div class="photography-metadata">
-                <% if photo.title.present? %><strong><%= photo.title %></strong><% end %>
-                <span>
-                  <%= [
-                    ("Camera: #{photo.metadata[:camera]}" if photo.metadata[:camera].present?),
-                    ("Lens: #{photo.metadata[:lens]}" if photo.metadata[:lens].present?),
-                    ("f/#{photo.metadata[:aperture]}" if photo.metadata[:aperture].present?),
-                    ("#{photo.metadata[:shutter_speed]} sec" if photo.metadata[:shutter_speed].present?),
-                    ("ISO #{photo.metadata[:iso]}" if photo.metadata[:iso].present?),
-                    photo.metadata[:location]
-                  ].compact.join(' · ') %>
-                </span>
+                <strong><%= photo.title %></strong>
+                <span><%= [
+                  [photo.metadata[:camera], photo.metadata[:focal_length]].compact.join(' · ').presence,
+                  ("f/#{photo.metadata[:aperture]}" if photo.metadata[:aperture].present?),
+                  photo.metadata[:shutter_speed],
+                  ("ISO #{photo.metadata[:iso]}" if photo.metadata[:iso].present?)
+                ].compact.join(' · ') %></span>
               </div>
             <% end %>
           </div>

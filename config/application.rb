@@ -18,6 +18,11 @@ Bundler.require(*Rails.groups)
 
 module NikkyHomeWebsite
   class Application < Rails::Application
+    # Foundation 6 still uses legacy Sass syntax internally; keep its warnings
+    # quiet while allowing warnings from this application's Sass to surface.
+    config.sass.quiet_deps = true
+    config.sass.silence_deprecations = [:import]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

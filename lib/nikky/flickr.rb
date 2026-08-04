@@ -27,22 +27,15 @@ module Nikky
         extras: 'date_taken,o_dims')
 
       unrefined_images.select { |image| image['o_width'].to_i > image['o_height'].to_i }.first(8).map do |image|
-        begin
-          info = flickr.photos.getInfo(photo_id: image['id'])
-          exif = flickr.photos.getExif(photo_id: image['id'])['exif'] || []
-        rescue StandardError => e
-          Rails.logger.warn("Flickr photo detail failure. #{e.inspect}")
-          info = {}
-          exif = []
-        end
-        metadata = photo_metadata(info, exif)
+        exif = photo_exif(image['id'])
+        metadata = photo_metadata(exif)
 
         Photo.new(FlickRaw.url_photopage(image),
           FlickRaw.url_b(image),
           Time.parse(image["datetaken"]),
           image['o_width'],
           image['o_height'],
-          info['title'].to_s.presence || image['title'],
+          image['title'].to_s.presence,
           metadata)
       end
 
@@ -55,14 +48,21 @@ module Nikky
 
     private
 
-    def photo_metadata(info, exif)
+    def photo_exif(photo_id)
+      flickr.photos.getExif(photo_id: photo_id)['exif'] || []
+    rescue StandardError => e
+      Rails.logger.warn("Flickr getExif failure. #{e.inspect}")
+      []
+    end
+
+    def photo_metadata(exif)
       {
         camera: exif_value(exif, 'Model'),
-        lens: exif_value(exif, 'LensModel', 'Lens'),
-        aperture: exif_value(exif, 'FNumber', 'Aperture'),
-        shutter_speed: exif_value(exif, 'ExposureTime', 'ShutterSpeed'),
-        iso: exif_value(exif, 'ISO'),
-        location: photo_location(info['location'])
+        focal_length: exif_value(exif, 'Focal Length', 'FocalLength'),
+        aperture: format_aperture(exif_value(exif, 'Aperture', 'F-Number', 'FNumber')),
+        shutter_speed: format_shutter_speed(exif_value(exif, 'Exposure', 'Exposure Time', 'ExposureTime', 'Shutter Speed')),
+        iso: exif_value(exif, 'ISO Speed', 'ISO'),
+        location: gps_location(exif)
       }
     rescue StandardError => e
       Rails.logger.warn("Flickr metadata failure. #{e.inspect}")
@@ -70,16 +70,34 @@ module Nikky
     end
 
     def exif_value(exif, *tags)
-      entry = exif.find { |value| tags.include?(value['tag']) }
+      normalized_tags = tags.map { |tag| tag.downcase.delete(' -_') }
+      entry = exif.find do |value|
+        [value['tag'], value['label']].compact.any? do |tag|
+          normalized_tags.include?(tag.to_s.downcase.delete(' -_'))
+        end
+      end
       entry && (entry['clean'] || entry['raw'])
     end
 
-    def photo_location(location)
-      return unless location
+    def format_aperture(value)
+      value.to_s.sub(/\Af\/?/i, '').presence
+    end
 
-      %w[locality county region country].filter_map do |place|
-        location[place].to_s.presence
-      end.join(', ').presence
+    def format_shutter_speed(value)
+      text = value.to_s
+      reciprocal = text.match(/\b1\/\d+(?:\.\d+)?\b/)&.to_s
+      return reciprocal if reciprocal
+
+      decimal = text.match(/\b0?\.\d+\b/)&.to_s.to_f
+      decimal.positive? ? "1/#{(1 / decimal).round}" : nil
+    end
+
+    def gps_location(exif)
+      latitude = exif_value(exif, 'Latitude', 'GPS Latitude')
+      longitude = exif_value(exif, 'Longitude', 'GPS Longitude')
+      return unless latitude.present? && longitude.present?
+
+      "#{latitude}, #{longitude}"
     end
 
     def get_nsid_for_username(username)

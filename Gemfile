@@ -1,25 +1,19 @@
 source 'https://rubygems.org'
 
-ruby '3.4.8'
+ruby '4.0.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~>7.0'
+gem 'rails', '~>8.0'
 # Use Puma as the app server
 gem 'puma'
-# Use SCSS for stylesheets
-# gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails'#, '~> 4.1.0'
-
 
 gem 'ostruct'
 # Use Dalli for Memcache
 gem 'dalli'
 
-# Pin connection_pool to 2.x for compatibility with Rails 7.2
-gem 'connection_pool', '~> 2.4'
+gem 'connection_pool'
 
 # Required for later versions of ruby
 gem 'mutex_m'

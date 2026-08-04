@@ -22,7 +22,7 @@ p, span, a {
 
 .head {
   .content {
-    padding: 0 .5rem 0 .5rem;
+    padding: 0 2rem;
   }
 
   .contact-links {
@@ -75,6 +75,11 @@ i {
   .row > div {
     padding-left: .5rem;
     padding-right: .5rem;
+  }
+
+  .row > div:not(.image) {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -137,6 +142,7 @@ i {
 
 .photography-metadata {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: .25rem .75rem;
   align-items: baseline;
