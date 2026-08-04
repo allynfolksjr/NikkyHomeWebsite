@@ -122,15 +122,22 @@ i {
 
 .photography-carousel {
   position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
 .photography-track {
-  display: flex;
+  display: block;
+  width: 100%;
 }
 
 .photography-slide {
-  flex: 0 0 100%;
+  display: none;
+  width: 100%;
+}
+
+.photography-slide[aria-hidden="false"] {
+  display: block;
 }
 
 .photography-slide img {
@@ -205,12 +212,6 @@ button {
 .photography-slide a:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .photography-track {
-    transition: transform .4s ease;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
