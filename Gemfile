@@ -11,7 +11,7 @@ gem 'uglifier'
 
 gem 'ostruct'
 # Use Dalli for Memcache
-gem 'dalli'
+gem 'dalli', '~> 4.1'
 
 gem 'connection_pool'
 
